@@ -13,11 +13,13 @@ class Carro:
 def iniciar_jogo():
     
     ferrari = Carro('Ferrari', 'vermelha')
-    porshe = Carro('Porshe', 'preto')
+    porshe = Carro('Porshe', 'preta')
+    vw = Carro("VW","Branca")
     
     while True:
-        ferrari.percorrer_distancia(randint(0, 10))
-        porshe.percorrer_distancia(randint(0, 10))
+        ferrari.percorrer_distancia(randint(0, 100))
+        porshe.percorrer_distancia(randint(0, 100))
+        vw.percorrer_distancia(randint(0,100))
         
         if ferrari.distancia >= 100:
             print(f'O vencedor foi o carro {ferrari.marca} {ferrari.cor}')
@@ -25,6 +27,10 @@ def iniciar_jogo():
         
         if porshe.distancia >= 100:
             print(f'O vencedor foi o carro {porshe.marca} {porshe.cor}')
+            break
+
+        if vw.distancia >= 100:
+            print(f'O vencedor foi o carro {vw.marca} {vw.cor}')
             break
 
 iniciar_jogo()
